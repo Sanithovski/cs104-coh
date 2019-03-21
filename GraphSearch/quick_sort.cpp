@@ -15,6 +15,7 @@ void quick_sort(std::vector<int>& v)
 unsigned int select_pivot(unsigned int start, unsigned int end)
 {
     if (start >= end) return start;
+    srand(time(0));
     return rand() % (end-start+1) + start;
 }
 
