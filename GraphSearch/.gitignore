@@ -1,5 +1,7 @@
 .tags
+connected_cells
+dfs_recursion
+quick_sort
 *.exe
 *.o
 *.dsYM
-dfs_recursion

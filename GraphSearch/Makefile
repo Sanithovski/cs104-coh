@@ -9,3 +9,6 @@ dfs_recursion: dfs_recursion.cpp dfs_recursion.h graph.h catch.hpp
 
 quick_sort: quick_sort.cpp quick_sort.h catch.hpp
 	$(COMPILE) $< -o $@
+	
+connected_cells: connected_cells.cpp catch.hpp
+	$(COMPILE) $< -o $@
