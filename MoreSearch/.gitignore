@@ -1,0 +1,6 @@
+*.dSYM
+*.o
+*.exe
+*.out
+.vscode
+dijkstra
