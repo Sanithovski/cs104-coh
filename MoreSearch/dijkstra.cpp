@@ -27,7 +27,7 @@ TEST_CASE("Basic Test for Dijksta", "[dijkstra]")
   
   vector<vector<vector<int> > > tests;
   
-  for (unsigned int i = 1; i <= 1; i++) {
+  for (unsigned int i = 1; i <= 5; i++) {
     ifile.open(input_dir + to_string(i) + ".txt");
     if (ifile.fail()) {
       cerr << "Cannot open file " << input_dir + to_string(i) + ".txt" << endl;
@@ -54,21 +54,24 @@ TEST_CASE("Basic Test for Dijksta", "[dijkstra]")
   
   SECTION("Base 1: Two paths") {
     REQUIRE(dijsktra(tests[0], 0, 5) == 13);
+    tests.clear();
   }
   
   SECTION("Base 2: Detour") {
-    
+    REQUIRE(dijsktra(tests[1], 0, 4) == 9);
+    tests.clear();
   }
-  SECTION("Base 3: Complicate graphs") {
-    
+  SECTION("Base 3: Complicated graphs") {
+    REQUIRE(dijsktra(tests[2], 0, 5) == 8);
+    tests.clear();
   }
   SECTION("Double edges") {
-    
+    REQUIRE(dijsktra(tests[3], 0, 3) == 8);
+    tests.clear();
   }
   SECTION("With 0 weights") {
-    
+    REQUIRE(dijsktra(tests[4], 0, 3) == 3);
+    tests.clear();
   }
-  SECTION("Larger") {
-    
-  }
+  
 }
